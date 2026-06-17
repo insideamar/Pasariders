@@ -447,6 +447,19 @@ address { font-style: normal; }
   will-change: transform;
 }
 
+@media (max-width: 767px) {
+  .hero__bg {
+    background-image: url('assets/hero-responsive.png');
+    background-position: center 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__bg {
+    background-position: center 25%;
+  }
+}
+
 .hero.loaded .hero__bg {
   transform: scale(1);
 }
@@ -1811,32 +1824,54 @@ body.lang-ne .hero__headline {
     right: 0;
     bottom: 0;
     flex-direction: column;
-    align-items: stretch;
-    background: rgba(13, 27, 42, 0.97);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 22, 40, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     padding: var(--space-xl) var(--container-pad);
-    gap: 0.25rem;
+    gap: 1rem;
     overflow-y: auto;
-    border-top: 1px solid var(--clr-dark-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 800;
   }
 
   .nav__menu.open {
     display: flex;
+    animation: menu-fade 0.3s ease-out forwards;
+  }
+
+  @keyframes menu-fade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .nav__link {
-    padding: 1rem 1.25rem;
-    font-size: 1.1rem;
-    border-radius: var(--radius-sm);
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    background: transparent;
+    border: 1px solid transparent;
+  }
+
+  .nav__link:hover, .nav__link.active {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav__cta {
     margin-left: 0;
-    margin-top: var(--space-sm);
+    margin-top: 1.5rem;
     justify-content: center;
-    padding: 1rem;
-    font-size: 1rem;
+    padding: 1.1rem 2.5rem;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 8px 32px rgba(255, 107, 53, 0.4);
   }
 
   .about__layout {
@@ -2136,16 +2171,26 @@ body.lang-ne .hero__headline {
 
 /* ===== 26. MISSION SECTION ===== */
 .mission-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
   margin-top: var(--space-xl);
 }
 
+@media (min-width: 768px) {
+  .mission-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mission-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .mission-card {
-  flex: 1 1 300px;
-  max-width: 380px;
+  width: 100%;
   padding: 2.5rem 2rem;
   border-radius: var(--radius-lg);
   display: flex;
