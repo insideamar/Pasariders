@@ -592,7 +592,7 @@ function throttle(fn, limit = 16) {
    INIT COMPLETE — Log for dev reference
    ==================================================== */
 console.info(
-  '%c🏍️ Pasa Riders Nepal%c — pasariders.com.np\nRide More, Earn More! | Ph: 9768533468',
+  '%c🏍️ Pasa Riders Nepal%c — pasariders.com.np\nTravel Safely, Earn More Income | Ph: 9768533468',
   'color:#FF6B35;font-family:sans-serif;font-size:16px;font-weight:bold;',
   'color:#8DA0B3;font-family:sans-serif;font-size:12px;'
 );
