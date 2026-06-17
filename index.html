@@ -106,6 +106,14 @@
 </head>
 
 <body>
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span class="lang-text" data-en="🚀 100 Bikes Successfully Operating | Bhaktapur – 25 | Lalitpur – 25 | Kathmandu – 50 | Excellent Customer Response Received" data-ne="🚀 १०० बाइकहरू सफलतापूर्वक सञ्चालनमा | भक्तपुर – २५ | ललितपुर – २५ | काठमाडौं – ५० | उत्कृष्ट ग्राहक प्रतिक्रिया प्राप्त">
+        🚀 100 Bikes Successfully Operating | Bhaktapur – 25 | Lalitpur – 25 | Kathmandu – 50 | Excellent Customer Response Received
+      </span>
+    </div>
+  </div>
 
   <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
   <a href="https://wa.me/9779768533468?text=Hi%2C%20I%27m%20interested%20in%20renting%20a%20bike%20from%20Pasa%20Riders%20Nepal!"
@@ -146,8 +154,13 @@
         <li>
           <a href="https://wa.me/9779768533468?text=Hi%2C%20I%27m%20interested%20in%20renting%20a%20bike!"
             class="nav__cta" target="_blank" rel="noopener noreferrer">
-            Book Now
+            <span class="lang-text" data-en="Book Now" data-ne="अहिले बुक गर्नुहोस्">Book Now</span>
           </a>
+        </li>
+        <li class="lang-switch-wrapper">
+          <button id="langToggle" class="lang-toggle" aria-label="Toggle Language">
+            <span class="lang-ne">नेपाली</span> | <span class="lang-en active">English</span>
+          </button>
         </li>
       </ul>
     </nav>
@@ -161,9 +174,15 @@
       <div class="hero__particles" aria-hidden="true" id="particles"></div>
 
       <div class="hero__content container">
-        <div class="hero__badge reveal">
-          <span class="badge-dot" aria-hidden="true"></span>
-          Now Open · Kathmandu Valley
+        <div class="hero__badge hero__badge--large reveal glass">
+          <div class="lang-text" data-en="<span class='badge-dot' aria-hidden='true'></span><strong>Now Open · Kathmandu Valley, Bhaktapur, Lalitpur</strong>" data-ne="<span class='badge-dot' aria-hidden='true'></span><strong>अब खुला छ · काठमाडौं उपत्यका, भक्तपुर, ललितपुर</strong>">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <strong>Now Open · Kathmandu Valley, Bhaktapur, Lalitpur</strong>
+          </div>
+          <div class="hero__badge-stats lang-text" data-en="<strong>100+ Bikes Operating in 3 Cities</strong><br/>Bhaktapur: 25 | Lalitpur: 25 | Kathmandu: 50" data-ne="<strong>३ शहरहरूमा १००+ बाइक सञ्चालनमा</strong><br/>भक्तपुर: २५ | ललितपुर: २५ | काठमाडौं: ५०">
+            <strong>100+ Bikes Operating in 3 Cities</strong><br/>
+            Bhaktapur: 25 | Lalitpur: 25 | Kathmandu: 50
+          </div>
         </div>
         <h1 class="hero__headline reveal">
           Ride More,<br />
@@ -428,11 +447,7 @@
       <div class="container about__layout">
         <div class="about__visual reveal">
           <div class="about__img-wrap">
-            <div class="about__img-bg" aria-hidden="true"></div>
-            <div class="about__badge-float glass" aria-label="Established 2026">
-              <span class="about__badge-year">2026</span>
-              <span class="about__badge-text">Established</span>
-            </div>
+            <img src="assets/poster.jpg" alt="The more you ride, the more you earn" class="about__poster-img" loading="lazy" />
           </div>
           <div class="about__cert-cards">
             <div class="cert-mini glass">
@@ -464,6 +479,12 @@
             We understand the hustle — platform riders on Pathao, Yango, and InDrive need reliable, insured bikes
             without the burden of ownership costs. That's exactly what we provide.
           </p>
+          <div class="about__mission glass">
+            <h3 class="about__mission-title lang-text" data-en="Empowering Youth, Stopping Migration" data-ne="युवा सशक्तिकरण, विदेश पलायन रोक्दै">Empowering Youth, Stopping Migration</h3>
+            <p class="about__mission-text lang-text" data-en="Our motive goes beyond rentals. We aim to provide immediate employment opportunities to our youth who feel forced to go abroad. By offering an accessible way to earn a decent living locally with zero upfront hidden costs, we are committed to retaining our nation's talent and helping them build a future at home." data-ne="हाम्रो मुख्य उद्देश्य भाडा मात्र होइन। विदेश जान बाध्य महसुस गर्ने हाम्रा युवाहरूलाई तुरुन्तै रोजगारीको अवसर प्रदान गर्नु हाम्रो लक्ष्य हो। कुनै पनि लुकेको अग्रिम शुल्क बिना स्थानीय स्तरमै राम्रो आम्दानी गर्ने सहज माध्यम उपलब्ध गराएर, हामी हाम्रो राष्ट्रको प्रतिभालाई स्वदेशमै भविष्य निर्माण गर्न मद्दत गर्न प्रतिबद्ध छौं।">
+              Our motive goes beyond rentals. We aim to provide immediate employment opportunities to our youth who feel forced to go abroad. By offering an accessible way to earn a decent living locally with zero upfront hidden costs, we are committed to retaining our nation's talent and helping them build a future at home.
+            </p>
+          </div>
 
           <div class="about__owner glass">
             <div class="about__owner-avatar" aria-hidden="true">
@@ -496,6 +517,143 @@
             <div class="about__detail">
               <span class="about__detail-label">Address</span>
               <span class="about__detail-value">Ward 6, Hatigounda, Budhanilkantha, KTM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MISSION & SOCIAL RESPONSIBILITY ===== -->
+    <section class="mission section" id="mission" aria-labelledby="mission-title" style="position:relative; overflow:hidden;">
+      <div class="mission__bg" style="position:absolute; inset:0; background: linear-gradient(rgba(10, 22, 40, 0.85), rgba(10, 22, 40, 0.95)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200') center/cover no-repeat; z-index:-1;"></div>
+      <div class="container">
+        <div class="section-header reveal" style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+          <span class="section-tag lang-text" data-en="Not just profit, but responsibility towards society" data-ne="नाफा मात्र होइन, समाजप्रतिको जिम्मेवारी पनि।">Not just profit, but responsibility towards society</span>
+          <h2 class="section-title" id="mission-title">
+            <span class="lang-text" data-en="Social <span class='highlight'>Responsibility</span>" data-ne="सामाजिक <span class='highlight'>उत्तरदायित्व</span>">Social <span class="highlight">Responsibility</span></span>
+          </h2>
+          <p class="section-desc lang-text" data-en="<strong>Pasa Riders is not established solely for the purpose of making a profit.</strong><br/>It is an effort to stop the migration of our Nepali brothers and sisters by providing them with employment within our own country. In addition, this company was launched with the objective of providing further social services in Nepal." data-ne="<strong>हाम्रो पासा राइडर्स कम्पनी केवल नाफा कमाउने उद्देश्यले मात्र स्थापना गरिएको होइन।</strong><br/>यो हाम्रो देशका नेपाली युवा दाजुभाइ तथा दिदीबहिनीहरूलाई स्वदेशमै रोजगारी प्रदान गरी वैदेशिक पलायन रोक्ने प्रयास हो। साथै, नेपालमा थप सामाजिक सेवा प्रदान गर्ने उद्देश्यले यो कम्पनी सञ्चालनमा ल्याइएको हो।">
+            <strong>Pasa Riders is not established solely for the purpose of making a profit.</strong><br/>
+            It is an effort to stop the migration of our Nepali brothers and sisters by providing them with employment within our own country. In addition, this company was launched with the objective of providing further social services in Nepal.
+          </p>
+        </div>
+
+        <div class="mission-grid">
+          <div class="mission-card glass reveal">
+            <div class="mission-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <p class="mission-card__text lang-text" data-en="<strong>1.</strong> Helping poor and distressed people according to their needs." data-ne="<strong>१.</strong> गरिब तथा दुःखी व्यक्तिहरूलाई आवश्यकता अनुसार सहयोग गर्ने।">
+              <strong>1.</strong> Helping poor and distressed people according to their needs.
+            </p>
+          </div>
+          
+          <div class="mission-card glass reveal">
+            <div class="mission-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3-6.5 6.5"/><path d="M3 21l6.5-6.5"/><path d="M14.5 13.5 9 19a1 1 0 1 1-3-3l3.88-3.88a3 3 0 0 1 4.24 0l.88.88a1 1 0 1 0 3-3l-2.81-2.81a5.79 5.79 0 0 0-7.06.87l-.47-.28a2 2 0 0 1-1.42-.25L3 18"/></svg>
+            </div>
+            <p class="mission-card__text lang-text" data-en="<strong>2.</strong> Caring for people with disabilities and providing services and support according to their health problems and needs." data-ne="<strong>२.</strong> अपांगता भएका व्यक्तिहरूको हेरचाह गर्ने तथा उनीहरूको स्वास्थ्य समस्या र आवश्यकता अनुसार सेवा तथा सहयोग प्रदान गर्ने।">
+              <strong>2.</strong> Caring for people with disabilities and providing services and support according to their health problems and needs.
+            </p>
+          </div>
+
+          <div class="mission-card glass reveal">
+            <div class="mission-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+            </div>
+            <p class="mission-card__text lang-text" data-en="<strong>3.</strong> Cleaning government properties free of cost and assisting the government in maintenance work as needed." data-ne="<strong>३.</strong> सरकारी सम्पत्तिहरूको निःशुल्क सरसफाइ गर्ने र आवश्यकता अनुसार मर्मत कार्यमा सरकारलाई सहयोग गर्ने।">
+              <strong>3.</strong> Cleaning government properties free of cost and assisting the government in maintenance work as needed.
+            </p>
+          </div>
+
+          <div class="mission-card glass reveal">
+            <div class="mission-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 22 2"/><path d="M16 2a4 4 0 0 0-4 4v5"/><path d="M20 6a4 4 0 0 0-4 4v5"/><path d="M12 6a4 4 0 0 0-4 4v5"/><path d="M8 10a4 4 0 0 0-4 4v5"/><path d="M4 14a4 4 0 0 0-4 4v5"/></svg>
+            </div>
+            <p class="mission-card__text lang-text" data-en="<strong>4.</strong> Providing services to Nepali laborers, farmers, brothers, and sisters according to their needs." data-ne="<strong>४.</strong> नेपाली मजदुर, किसान दाजुभाइ तथा दिदीबहिनीहरूलाई आवश्यकता अनुसार सेवा प्रदान गर्ने।">
+              <strong>4.</strong> Providing services to Nepali laborers, farmers, brothers, and sisters according to their needs.
+            </p>
+          </div>
+
+          <div class="mission-card glass reveal">
+            <div class="mission-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <p class="mission-card__text lang-text" data-en="<strong>5.</strong> Creating an environment to care for elderly parents and provide service and support as needed." data-ne="<strong>५.</strong> वृद्ध आमा-बुबाहरूको हेरचाह तथा आवश्यकता अनुसार सेवा र सहयोग गर्ने वातावरण निर्माण गर्ने।">
+              <strong>5.</strong> Creating an environment to care for elderly parents and provide service and support as needed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS SECTION ===== -->
+    <section class="testimonials section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag lang-text" data-en="Real Stories" data-ne="वास्तविक कथाहरू">Real Stories</span>
+          <h2 class="section-title" id="reviews-title"><span class="highlight lang-text" data-en="Rider Reviews" data-ne="राइडर समीक्षाहरू">Rider Reviews</span></h2>
+          
+          <div class="reviews-banner glass">
+            <h3 class="lang-text" data-en="100 Bikes Successfully Operating" data-ne="१०० बाइकहरू सफलतापूर्वक सञ्चालनमा">100 Bikes Successfully Operating</h3>
+            <p class="lang-text" data-en="<strong>Bhaktapur – 25 | Lalitpur – 25 | Kathmandu – 50</strong>" data-ne="<strong>भक्तपुर – २५ | ललितपुर – २५ | काठमाडौं – ५०</strong>"><strong>Bhaktapur – 25 | Lalitpur – 25 | Kathmandu – 50</strong></p>
+            <span class="reviews-banner-tag lang-text" data-en="Excellent Customer Response Received" data-ne="उत्कृष्ट ग्राहक प्रतिक्रिया प्राप्त">Excellent Customer Response Received</span>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card glass reveal">
+            <p class="review-card__text lang-text" data-en="“Pasa Riders helped me start earning the very next day. No complex paperwork and the bike is perfectly maintained!”" data-ne="“पासा राइडर्सले मलाई भोलिपल्टैबाट कमाउन सुरु गर्न मद्दत गर्यो। कुनै जटिल कागजी कार्य छैन र बाइक पूर्ण रूपमा मर्मत गरिएको छ!”">“Pasa Riders helped me start earning the very next day. No complex paperwork and the bike is perfectly maintained!”</p>
+            <div class="review-card__author">
+              <img src="assets/nepali_rider_1.png" alt="Rider 1" class="review-card__img" loading="lazy" />
+              <div>
+                <div class="review-card__name">Sujan T.</div>
+                <div class="review-card__platform">Pathao Rider</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="review-card glass reveal">
+            <p class="review-card__text lang-text" data-en="“The Rs.700/day rate with insurance is the best deal in Kathmandu. I feel safe and make good money.”" data-ne="“बीमा सहितको रू.७००/दिनको दर काठमाडौंमा सबैभन्दा राम्रो सम्झौता हो। म सुरक्षित महसुस गर्छु र राम्रो पैसा कमाउँछु।”">“The Rs.700/day rate with insurance is the best deal in Kathmandu. I feel safe and make good money.”</p>
+            <div class="review-card__author">
+              <img src="assets/nepali_rider_2.png" alt="Rider 2" class="review-card__img" loading="lazy" />
+              <div>
+                <div class="review-card__name">Bishal G.</div>
+                <div class="review-card__platform">InDrive Rider</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass reveal">
+            <p class="review-card__text lang-text" data-en="“I was thinking of going abroad, but thanks to Pasa Riders, I now earn a respectful living right here at home.”" data-ne="“म विदेश जाने सोचमा थिएँ, तर पासा राइडर्सलाई धन्यवाद, म अब आफ्नै घरमा सम्मानजनक जीवनयापन गर्छु।”">“I was thinking of going abroad, but thanks to Pasa Riders, I now earn a respectful living right here at home.”</p>
+            <div class="review-card__author">
+              <img src="assets/nepali_rider_3.png" alt="Rider 3" class="review-card__img" loading="lazy" />
+              <div>
+                <div class="review-card__name">Ramesh M.</div>
+                <div class="review-card__platform">Yango Rider</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass reveal">
+            <p class="review-card__text lang-text" data-en="“Very supportive team! My bike had a minor issue and they fixed it instantly. Highly recommended.”" data-ne="“धेरै सहयोगी टोली! मेरो बाइकमा सानो समस्या थियो र उनीहरूले तुरुन्तै ठीक गरे। अत्यधिक सिफारिस गरिएको।”">“Very supportive team! My bike had a minor issue and they fixed it instantly. Highly recommended.”</p>
+            <div class="review-card__author">
+              <img src="assets/nepali_rider_4.png" alt="Rider 4" class="review-card__img" loading="lazy" />
+              <div>
+                <div class="review-card__name">Anil P.</div>
+                <div class="review-card__platform">Delivery Partner</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass reveal">
+            <p class="review-card__text lang-text" data-en="“Great initiative for Nepali youth. Easy onboarding process and I started making trips the same afternoon.”" data-ne="“नेपाली युवाहरूका लागि राम्रो पहल। सजिलो अनबोर्डिङ प्रक्रिया र मैले त्यही दिउँसो यात्राहरू गर्न सुरु गरें।”">“Great initiative for Nepali youth. Easy onboarding process and I started making trips the same afternoon.”</p>
+            <div class="review-card__author">
+              <img src="assets/nepali_rider_5.png" alt="Rider 5" class="review-card__img" loading="lazy" />
+              <div>
+                <div class="review-card__name">Prakash S.</div>
+                <div class="review-card__platform">Pathao Rider</div>
+              </div>
             </div>
           </div>
         </div>
@@ -814,6 +972,13 @@
                 </div>
               </div>
               <div class="contact-info__item">
+                <div class="contact-info__icon" aria-hidden="true">✉️</div>
+                <div>
+                  <div class="contact-info__label lang-text" data-en="Email" data-ne="इमेल">Email</div>
+                  <a href="mailto:pasaridersnepal@gmail.com" class="contact-info__value contact-info__link">pasaridersnepal@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-info__item">
                 <div class="contact-info__icon" aria-hidden="true">🕐</div>
                 <div>
                   <div class="contact-info__label">Business Hours</div>
@@ -939,6 +1104,7 @@
   </button>
 
   <script src="script.js"></script>
+  <script src="lang.js"></script>
 </body>
 
 </html>

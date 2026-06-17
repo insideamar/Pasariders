@@ -43,6 +43,7 @@ function throttle(fn, limit = 16) {
    ==================================================== */
 (function initNavbar() {
   const header = document.getElementById('header');
+  const annBar = document.querySelector('.announcement-bar');
   if (!header) return;
 
   const SCROLL_THRESHOLD = 60;
@@ -50,8 +51,10 @@ function throttle(fn, limit = 16) {
   function updateHeader() {
     if (window.scrollY > SCROLL_THRESHOLD) {
       header.classList.add('scrolled');
+      if (annBar) annBar.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
+      if (annBar) annBar.classList.remove('scrolled');
     }
   }
 
