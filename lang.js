@@ -28,8 +28,7 @@ const dictionary = [
   { selector: ".step-card:nth-child(1) .step-card__title", en: "Register", ne: "दर्ता गर्नुहोस्" },
   { selector: ".step-card:nth-child(1) .step-card__desc", en: "Fill our quick inquiry form or WhatsApp us with your details and preferred area.", ne: "हाम्रो छोटो फारम भर्नुहोस् वा तपाईंको विवरण र मनपर्ने क्षेत्रको साथ हामीलाई ह्वाट्सएप गर्नुहोस्।" },
   
-  { selector: ".step-card:nth-child(2) .step-card__title", en: "Choose Bike", ne: "बाइक छान्नुहोस्" },
-  { selector: ".step-card:nth-child(2) .step-card__desc", en: "Select from our fleet of well-maintained motorcycles suited for city delivery work.", ne: "हाम्रो राम्रोसँग मर्मत गरिएका मोटरसाइकलहरू मध्येबाट छान्नुहोस् जुन शहरको डेलिभरी कामको लागि उपयुक्त छ।" },
+  // "Choose Bike" is now handled via inline data-en and data-ne attributes in HTML
 
   { selector: ".step-card:nth-child(3) .step-card__title", en: "Pay Rs.700/day", ne: "रू.७००/दिन तिर्नुहोस्" },
   { selector: ".step-card:nth-child(3) .step-card__desc", en: "Simple daily rate — no hidden fees. Pay daily or in advance as per your convenience.", ne: "सरल दैनिक दर — कुनै लुकेका शुल्कहरू छैनन्। तपाईंको सुविधा अनुसार दैनिक वा अग्रिम भुक्तानी गर्नुहोस्।" },
@@ -121,8 +120,7 @@ const dictionary = [
   { selector: ".faq-item:nth-child(5) .faq-item__question", en: "\n              In which areas can I operate the rented bike?\n              <span class=\"faq-icon\" aria-hidden=\"true\">+</span>\n            ", ne: "\n              म भाडामा लिएको बाइक कुन क्षेत्रमा चलाउन सक्छु?\n              <span class=\"faq-icon\" aria-hidden=\"true\">+</span>\n            " },
   { selector: ".faq-item:nth-child(5) .faq-item__answer p", en: "You can freely operate across the <strong>entire Kathmandu Valley</strong> — including Kathmandu,\n                Bhaktapur, and Lalitpur districts. Coverage for outside the valley may require prior arrangement.", ne: "तपाईं <strong>सम्पूर्ण काठमाडौं उपत्यका</strong> — काठमाडौं, भक्तपुर, र ललितपुर जिल्लाहरू सहित स्वतन्त्र रूपमा सञ्चालन गर्न सक्नुहुन्छ। उपत्यका बाहिरको कभरेजको लागि पूर्व व्यवस्था आवश्यक हुन सक्छ।" },
 
-  { selector: ".faq-item:nth-child(6) .faq-item__question", en: "\n              Can I start earning on the same day I register?\n              <span class=\"faq-icon\" aria-hidden=\"true\">+</span>\n            ", ne: "\n              के म दर्ता गरेकै दिनबाट कमाउन सुरु गर्न सक्छु?\n              <span class=\"faq-icon\" aria-hidden=\"true\">+</span>\n            " },
-  { selector: ".faq-item:nth-child(6) .faq-item__answer p", en: "Absolutely! Once your registration is complete and all documents are verified, you can take the bike\n                and <strong>start earning the same day</strong>. Our process is designed to get you on the road as fast\n                as possible.", ne: "पक्कै पनि! तपाईंको दर्ता पूरा भएपछि र सबै कागजातहरू प्रमाणित भएपछि, तपाईं बाइक लिन र <strong>सोही दिन कमाउन सुरु गर्न सक्नुहुन्छ</strong>। हाम्रो प्रक्रिया तपाईंलाई सकेसम्म छिटो सडकमा ल्याउनको लागि डिजाइन गरिएको छ।" },
+  // FAQ 6 is now handled via inline data-en and data-ne attributes in HTML
 
   // Inquiry
   { selector: "#inquiry .section-tag", en: "Get Started Today", ne: "आजै सुरु गर्नुहोस्" },
